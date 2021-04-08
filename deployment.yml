@@ -16,7 +16,7 @@ spec:
          containers:
            - name: springboot-image
              image: govanin/spring-boot-app
-  replicas: 2
+  replicas: 3
   selector:
      matchLabels:
          type: app
