@@ -2,6 +2,7 @@
 - hosts: k8s-master
   remote_user: ubuntu
   become: yes
+  become_user: root
   gather_facts: no
   tasks:
    - name: copy k8s files
