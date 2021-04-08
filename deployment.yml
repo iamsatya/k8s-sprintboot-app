@@ -9,9 +9,9 @@ spec:
   template:
       metadata:
         name: springboot-pod
-      labels:
-        type: app
-        env: prod
+        labels:
+          type: app
+          env: prod
       spec:
          containers:
            - name: springboot-image
