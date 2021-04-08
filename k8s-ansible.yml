@@ -1,5 +1,5 @@
 ---
-hosts: k8s-workernodes
+hosts: k8s-master
 gather_facts: no
 tasks:
   - name: copy k8s files
