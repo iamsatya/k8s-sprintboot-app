@@ -1,19 +1,19 @@
 ---
-hosts: k8s-master
-gather_facts: no
-tasks:
-  - name: copy k8s files
-    copy:
-      src: "{{ item }}"
-      dest: /tmp/
-    loop:
-    - deployment.yml
-    - service.yml
-  - name: create deployment
-    shell: kubectl apply -f deployment.yml
-    args:
-      chdir: /tmp/
-  - name: create service
-    shell: kubectl apply -f service.yml
-    args:
-      chdir: /tmp/
+- hosts: k8s-master
+  gather_facts: no
+  tasks:
+   - name: copy k8s files
+     copy:
+       src: "{{ item }}"
+       dest: /tmp/
+     loop:
+      - deployment.yml
+      - service.yml
+   - name: create deployment
+     shell: kubectl apply -f deployment.yml
+     args:
+       chdir: /tmp/
+   - name: create service
+     shell: kubectl apply -f service.yml
+     args:
+       chdir: /tmp/
