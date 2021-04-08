@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-deployment
+  labels:
+     env: prod
+     type: app
+spec:
+  template:
+      metadata:
+        name: springboot-pod
+      labels:
+        type: app
+        env: prod
+      spec:
+         containers:
+           - name: springboot-image
+             image: govanin/spring-boot-app
+  replicas: 2
+  selector:
+     matchLabels:
+         type: app
+         env: prod
