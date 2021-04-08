@@ -6,6 +6,7 @@ spec:
         type: NodePort
         ports:
                 - targetPort: 8080
+                  port: 8080
         selector:
           type: app
           env: prod
