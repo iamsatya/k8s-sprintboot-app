@@ -1,7 +1,6 @@
 ---
 - hosts: k8s-master
   remote_user: ubuntu
-  private_key_file: /etc/ansible/satya.pem
   become: yes
   gather_facts: no
   tasks:
