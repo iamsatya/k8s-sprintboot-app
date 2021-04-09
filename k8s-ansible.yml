@@ -17,6 +17,6 @@
      args:
        chdir: /tmp/
    - name: create service
-     shell: export KUBECONFIG=/etc/kubernetes/admin.conf && kubectl apply -f service.yml
+     shell: kubectl apply -f service.yml
      args:
        chdir: /tmp/
