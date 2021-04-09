@@ -17,6 +17,6 @@
      args:
        chdir: /tmp/
      loop: 
-      - KUBECONFIG=/etc/kubernetes/admin.conf
+      - export KUBECONFIG=/etc/kubernetes/admin.conf
       - kubectl apply -f deployment.yml
       - kubectl apply -f service.yml
